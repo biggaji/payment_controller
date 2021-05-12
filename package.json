@@ -1,0 +1,25 @@
+{
+  "name": "payment_controller",
+  "version": "1.0.0",
+  "description": "A payment control built using typescript class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biggaji/payment_controller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biggaji/payment_controller/issues"
+  },
+  "homepage": "https://github.com/biggaji/payment_controller#readme",
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
