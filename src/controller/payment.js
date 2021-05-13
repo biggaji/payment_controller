@@ -1,22 +1,20 @@
+"use strict";
 class Payment {
-    public from: string;
-    public balance: number = 100000;
-
-    constructor(from:string) {
+    constructor(from) {
+        this.balance = 100000;
         this.from = from;
     }
-
-    protected sendMoney(amount:number, to:string):string {
+    sendMoney(amount, to) {
         // check if sender has sufficent balance
-        if(amount > this.balance) {
+        if (amount > this.balance) {
             return `Insufficent fund, please load your account with money!`;
-        } else {
+        }
+        else {
             this.balance = this.balance - amount;
             return `${this.from} sent $${amount} to ${to} on ${new Date().toDateString()}`;
         }
     }
-
-    protected viewBalance():number {
+    viewBalance() {
         return this.balance;
     }
 }
