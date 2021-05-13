@@ -1,15 +1,24 @@
 class Payment {
-    from: string;
-    to: string;
-    amount: number;
+    public from: string;
+    // public to: string;
+    // amount: number;
+    public balance: number;
 
-    constructor(from:string, to:string, amount:number) {
+    constructor(from:string, balance:number) {
         this.from = from;
-        this.to = to;
-        this.amount = amount;
+        this.balance = balance;
     }
 
-    sendMoney():string {
-       return `${this.from} sent ${$this.amount} to ${this.to} on ${new Date().toLocaleString()}`;
+    protected sendMoney(public amount:number, to:string):string {
+        // check if sender has sufficent balance
+        if(amount > this.balance) {
+            return `Insufficent fund, please load your account with money!`;
+        }
+
+       return `${this.from} sent $${amount} to ${this.to} on ${new Date().toLocaleString()}`;
+    }
+
+    protected viewBalance():number {
+        return this.balance;
     }
 }
